@@ -95,7 +95,7 @@ const Header = () => {
     <div>
 
       {/* Main AppBar */}
-      <header className="absolute top-0 left-0 right-0 z-50">
+      <header className="">
         <div className="flex justify-between items-center py-4 px-4 md:px-8">
           {/* Logo */}
           <div className="w-[200px]">
@@ -311,10 +311,7 @@ const Header = () => {
           </div>
         </div>
       )}
-        <div className="relative">
-            <img src="././slider8-7-1.jpg" height="500px"/>
-        </div>
-      {/* banner */}
+   
     </div>
 
     </>
