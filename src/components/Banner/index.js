@@ -33,56 +33,68 @@ export function Banner() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden">
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          } transition-opacity duration-1000 absolute inset-0 ${slide.bgColor}`}
-          style={{ zIndex: index === currentSlide ? 1 : 0 }}
-        >
-          <div className="container mx-auto px-4 h-full">
-            <div className="flex flex-col md:flex-row items-center justify-between h-full py-16 md:py-24">
-              <div className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0 z-10">
-                <div className="space-y-6 max-w-xl mx-auto md:mx-0 transition-all duration-700 transform translate-y-0">
-                  <img src={slide.icon || "/placeholder.svg"} alt="Icon" className="h-16 md:h-20 mx-auto md:mx-0" />
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800">{slide.title}</h1>
-                  <p className="text-gray-600 text-lg">{slide.description}</p>
-                  <div>
-                    <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 rounded-md">
-                      View More
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 relative">
-                <div className="transform transition-all duration-1000 translate-x-0">
-                  <img
-                    src={slide.image || "/placeholder.svg"}
-                    alt={slide.title}
-                    className="max-w-full h-auto mx-auto"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+    <section className="w-full bg-[#f7efe5] relative overflow-hidden">
+    <div className="max-w-7xl mx-auto px-4 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      {/* Left side with image */}
+      <div className="relative flex justify-center items-center">
+        <img
+          src="./Nirant.png"
+          alt="Juice Bottles"
+          className="max-w-full h-auto z-10 relative"
+        />
+      </div>
+  
+      {/* Right side with text */}
+      <div className="text-center md:text-left relative z-10">
+        <div className="mb-4 inline-block">
+          <img
+            src="./home1-slide1-icon.png"
+            alt="Leaf Icon"
+            className="inline-block w-[80px] h-auto"
+          />
         </div>
-      ))}
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+          Only Organic Product
+        </h1>
+        <p className="text-gray-500 mt-4 text-base md:text-lg max-w-xl">
+          Creek chub Manta Ray sixgill ray Kafue pike pike characid walleye
+          sailbearer cowfish, half-gill black bass taimen chimaera false cat
+          shark  Creek chub Manta Ray sixgill ray Kafue pike pike characid walleye
+          sailbearer cowfish, half-gill black bass taimen chimaera false cat.
+        </p>
+        <div className="mt-6">
+          <a
+            href="https://demo.artureanec.com/product-category/shop-demo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#fd7744] hover:bg-[#e06639] text-white font-semibold py-3 px-6 rounded shadow-lg transition duration-300"
+          >
+            VIEW MORE
+          </a>
+        </div>
+      </div>
+    </div>
+  
+{/* Top Right Paint Texture */}
+<div className="absolute right-0 top-0 w-full h-full max-w-[900px] pointer-events-none opacity-100 z-0">
+  <img
+    src="./home6-slide1-bg.png"
+    alt="Paint Texture"
+    className="w-full h-full object-cover"
+  />
+</div>
 
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors"
-      >
-        <ChevronLeft className="h-6 w-6 text-gray-700" />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors"
-      >
-        <ChevronRight className="h-6 w-6 text-gray-700" />
-      </button>
-    </section>
+{/* Bottom Left Paint Texture */}
+<div className="absolute left-0 bottom-0 w-full h-full max-w-[900px] pointer-events-none opacity-100 rotate-180 z-0">
+  <img
+    src="./home6-slide1-bg.png"
+    alt="Paint Texture"
+    className="w-full h-full object-cover"
+  />
+</div>
+
+  </section>
+  
   )
 }
 

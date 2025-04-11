@@ -95,7 +95,7 @@ const Header = () => {
     <div>
 
       {/* Main AppBar */}
-      <header className="">
+      <header className="border-b border-2-[#f7efe5]">
         <div className="flex justify-between items-center py-4 px-4 md:px-8">
           {/* Logo */}
           <div className="w-[200px]">
